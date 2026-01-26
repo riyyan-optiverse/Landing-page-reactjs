@@ -2,15 +2,17 @@ import { cardsDaa } from "../../static/static-data";
 import { CardContent } from "../baseCard/card-content";
 import { BaseButton } from "../button/base-button";
 import { ImageContent } from "../image/image-content";
-
+import { DivData } from "../../static/static-dataCard";
 export const Card = () => {
   return (
-    <section className="bg-white w-10/12 mx-auto mt-0 p-0  rounded-xl shadow-xl">
-      <div className="h-auto flex justify-center gap-4 mt-2">
+    <section className="bg-white w-9/12 mx-auto mt-0 p-0  rounded-xl shadow-xl">
+     <div className="h-auto flex flex-wrap justify-center gap-4 mt-2 overflow-hidden">
+
         {cardsDaa.map((card, index) => (
           <div
             key={index}
-            className="w-60 bg-slate-200 h-80 flex flex-col   gap-2 shadow-lg rounded-lg"
+           className="bg-slate-200 w-60 h-80  flex flex-col gap-3 overflow-hidden shadow-lg rounded-sm hover:shadow-2xl transition-shadow duration-300"
+
           >
             <ImageContent image={card.image} title={card.title} />
             <div className="flex flex-col gap-1 p-3">
@@ -29,15 +31,17 @@ export const Card = () => {
             Get Started With Four Easy Steps
           </h1>
         </div>
-        <div className="bg-white w-96 p-6 py-auto rounded-md shadow-md flex flex-col items-center text-center gap-3">
-          <div>
-            <img src="src/assets/pngs/logo-1.jpg" alt="Logo" className="h-10 w-auto" />
-          </div>
-          <p className="text-sm font-semibold ">Upload Images</p>
-          <p className="text-xs">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-            consequuntur mollitia.
-          </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {DivData.map((step, index) =>(
+          <div 
+          key={index}
+          className="bg-white p-9 rounded-md shadow-md flex flex-col items-center text-center gap-2  hover:shadow-2xl transition-shadow duration-300">
+            <img src={step.image} alt={step.title} className="h-10 w-auto" />
+          <p className="text-sm font-semibold ">{step.title}</p>
+          <p className="text-xs">{step.desc}</p>
+        </div>
+
+        ))}
         </div>
       </div>
     </section>

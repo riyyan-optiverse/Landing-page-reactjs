@@ -1,9 +1,11 @@
-export const ImageContent = ({image, title}) => {
+export const ImageContent = ({ image, title }) => {
   return (
+   <div className="h-40 w-full overflow-hidden ">
       <img
         src={image}
         alt={title}
-        className="h-44 w-52 rounded-md shadow-lg mt-4 ml-4"
+        className="w-full h-full object-cover"
       />
+    </div>
   );
 };
