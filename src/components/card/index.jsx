@@ -6,13 +6,11 @@ import { DivData } from "../../static/static-dataCard";
 export const Card = () => {
   return (
     <section className="bg-white w-9/12 mx-auto mt-0 p-0  rounded-xl shadow-xl">
-     <div className="h-auto flex flex-wrap justify-center gap-4 mt-2 overflow-hidden">
-
+      <div className="h-auto flex flex-wrap justify-center gap-4 mt-4 overflow-hidden">
         {cardsDaa.map((card, index) => (
           <div
             key={index}
-           className="bg-slate-200 w-60 h-80  flex flex-col gap-3 overflow-hidden shadow-lg rounded-sm hover:shadow-2xl transition-shadow duration-300"
-
+            className="bg-slate-200 w-60 h-80  flex flex-col gap-3 overflow-hidden shadow-lg rounded-sm hover:shadow-2xl transition-shadow duration-300"
           >
             <ImageContent image={card.image} title={card.title} />
             <div className="flex flex-col gap-1 p-3">
@@ -32,16 +30,16 @@ export const Card = () => {
           </h1>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {DivData.map((step, index) =>(
-          <div 
-          key={index}
-          className="bg-white p-9 rounded-md shadow-md flex flex-col items-center text-center gap-2  hover:shadow-2xl transition-shadow duration-300">
-            <img src={step.image} alt={step.title} className="h-10 w-auto" />
-          <p className="text-sm font-semibold ">{step.title}</p>
-          <p className="text-xs">{step.desc}</p>
-        </div>
-
-        ))}
+          {DivData.map((step, index) => (
+            <div
+              key={index}
+              className="bg-white p-9 rounded-md shadow-md flex flex-col items-center text-center gap-2  hover:shadow-2xl transition-shadow duration-300"
+            >
+              <img src={step.image} alt={step.title} className="h-10 w-auto" />
+              <p className="text-sm font-semibold ">{step.title}</p>
+              <p className="text-xs">{step.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
