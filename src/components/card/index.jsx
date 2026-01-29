@@ -11,6 +11,9 @@ export const Card = () => {
     //  second time in execution count = 1, after increment count = 2
     //  third time in execution count = 2, after increment count = 3
   };
+   const handleDecrement = () => {
+    setCount(count -1);
+   }
 
   return (
     <section className="bg-white w-9/12 mx-auto mt-0 p-0  rounded-xl shadow-xl mb-20">
@@ -18,17 +21,23 @@ export const Card = () => {
       <StepCard />
 
       <div className="p-5">
-        <h2 className="text-center text-xl font-bold mt-4">Product Count</h2>
-        <span className="mr-5 text-base font-medium text-blue-400">
+        <h2 className="text-center text-xl font-bold mt-4 mb-3">Product Count</h2>
+        <div className="flex flex-wrap items-center   gap-4">
+        <span className=" text-base font-medium text-blue-400">
           Count Value: {count}
         </span>
 
         <button
           onClick={handleIncrement}
-          className="bg-orange-300 p-4 rounded-md text-white"
+          className="bg-orange-400 p-4 rounded-md text-white"
         >
           Increment Count
         </button>
+        <button  onClick={handleDecrement} 
+        className="bg-blue-400 p-4 rounded-md text-white">
+          Decrement Count
+        </button>
+        </div>
       </div>
     </section>
   );

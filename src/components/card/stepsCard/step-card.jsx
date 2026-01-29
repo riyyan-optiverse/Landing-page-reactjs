@@ -6,7 +6,7 @@ export const StepCard = () => {
       <div className="flex justify-center items-center  flex-col mb-4">
         <h3 className="mt-3">Here's How It Works</h3>
         <h1 className="text-xl font-semibold">
-          Get Started With Four Easy Steps
+          Get Started With 4 Easy Steps
         </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
