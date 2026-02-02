@@ -10,13 +10,13 @@ export const productCardData = [
     condition: "Good As New",
     buttonText: "Wed, 18 Feb, 01:18",
   },
-  {
+  {  
     image: officeImage,
     title: "Neewer Universal Shoulder Rig ",
     bidLabel: "Starting Bid",
     price: "CHF 60.-",
     bids: "(0 Bid)",
-    condition: "Good As New",
+    condition: "Good As New", 
     buttonText: "Wed, 18 Feb, 01:18",
   },
 ];
