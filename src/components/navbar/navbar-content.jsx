@@ -11,33 +11,32 @@ class Navbar extends Component {
                 <img src={logoIcon} alt="logo" className="h-14 w-auto ml-10" />
               </div>
               <div className="flex  gap-6 justify-center items-center">
-                <span className="font-semibold text-base">Home</span>
-                <span className="font-semibold text-base">
+                <span className="font-semibold text-base cursor-pointer">Home</span>
+                <span className="font-semibold text-base cursor-pointer">
                   Property Listing
                 </span>
-                <div className="p-2 bg-orange-500 rounded-sm">
+                <button className="p-2 bg-orange-500 rounded-sm cursor-pointer hover:bg-orange-600">
                   <span className="font-semibold text-base text-white">
                     Post Property
                   </span>
-                </div>
-                <span className="font-semibold text-base">Blog</span>
-                <span className="font-semibold text-base">Contact us</span>
+                </button>
+                <span className="font-semibold text-base cursor-pointer">Blog</span>
+                <span className="font-semibold text-base cursor-pointer">Contact us</span>
               </div>
             </div>
             <div className="flex  justify-center items-center gap-3">
-              <div className="p-2 bg-slate-200 rounded-sm">
+              <button className="p-2 bg-slate-200 rounded-sm cursor-pointer hover:bg-slate-300">
                 <span className="font-semibold text-base ">Login</span>
-              </div>
-              <div className="p-2 bg-orange-500 rounded-sm">
+              </button>
+              <button className="p-2 bg-orange-500 rounded-sm cursor-pointer hover:bg-orange-600">
                 <span className="font-semibold text-base text-white ">
                   SignUp
                 </span>
-              </div>
+              </button>
             </div>
           </div>
         </div>
         <hr className="border-t-2 border-gray-300 " />
-
       </>
     );
   }

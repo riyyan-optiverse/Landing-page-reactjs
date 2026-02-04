@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class CardContent extends Component {
     render() {
         return(
-            <>
+          
              <div className="flex flex-col justify-center items-center mt-20">
             <p className="font-semibold text-2xl">
               Post Your Property - Free & Easy
@@ -13,8 +13,8 @@ class CardContent extends Component {
               minutes. Verified listings get more views
             </p>
           </div>
-          <hr className="border-t border-gray-300 mt-10 mb-6" />
-            </>
+         
+            
         );
     }
 } 
