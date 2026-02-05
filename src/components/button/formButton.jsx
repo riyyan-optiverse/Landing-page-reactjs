@@ -1,0 +1,13 @@
+import React, { Component } from "react";
+
+class FormButton extends Component {
+    render() {
+        return(
+            <button className="px-10 py-3 bg-orange-500 rounded-md hover:bg-orange-600">
+              <span className="font-semibold text-lg text-white ">Submit</span>
+            </button>
+        );
+    }
+}
+
+export default FormButton;
