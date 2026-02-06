@@ -17,8 +17,7 @@ class InputFields extends Component {
             </div>
           ))}
         </div>
-         <TextArea/>
-         
+        <TextArea />
       </>
     );
   }

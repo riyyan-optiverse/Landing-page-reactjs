@@ -5,11 +5,12 @@ import CardContent from "./cardContent";
 import InputFields from "../input-fields/inputField";
 import FormButton from "../button/formButton";
 import ListingDisclaimer from "./postingDisclaimer";
+import Footer from "../footer/footerContent";
 
 class Card extends Component {
   render() {
     return (
-      <div className="bg-white w-11/12 h-auto max-w-7xl mx-auto  shadow-xl ">
+      <div className="bg-white w-11/12 h-auto max-w-6xl mx-auto  shadow-xl ">
         <Navbar />
         <CardContent />
         <hr className="border-t border-gray-300 mt-10 mb-6" />
@@ -28,6 +29,7 @@ class Card extends Component {
         <div className="px-16">
           <ListingDisclaimer />
         </div>
+        <Footer />
       </div>
     );
   }
