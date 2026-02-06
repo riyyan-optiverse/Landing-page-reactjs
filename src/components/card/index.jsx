@@ -9,7 +9,7 @@ import ListingDisclaimer from "./postingDisclaimer";
 class Card extends Component {
   render() {
     return (
-      <div className="bg-white w-11/12 h-auto mx-auto  shadow-xl ">
+      <div className="bg-white w-11/12 h-auto max-w-7xl mx-auto  shadow-xl ">
         <Navbar />
         <CardContent />
         <hr className="border-t border-gray-300 mt-10 mb-6" />

@@ -8,7 +8,7 @@ class Navbar extends Component {
           <div className="flex gap-40">
             <div className="flex gap-56">
               <div>
-                <img src={logoIcon} alt="logo" className="h-14 w-auto ml-10" />
+                <img src="src/assets/react.svg" alt="logo" className="h-12 w-auto pl-10" />
               </div>
               <div className="flex  gap-6 justify-center items-center">
                 <span className="font-semibold text-base cursor-pointer">Home</span>
