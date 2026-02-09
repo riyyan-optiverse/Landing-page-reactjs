@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="w-full bg-orange-500 mt-5">
-        <div className="px-6 md:px-16 pt-7 flex flex-col md:flex-row gap-10 md:gap-40">
+        <div className="px-6 md:px-16 pt-7 flex flex-col md:flex-row gap-10 md:gap-44">
           <div className="flex flex-col gap-6">
             <p className="text-2xl font-medium text-white">Quick Links</p>
             <div className="flex flex-col gap-1">
@@ -25,13 +25,13 @@ class Footer extends Component {
               <p className="text-lg text-white">Telegram</p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 md:mt-20">
+          <div className="flex flex-col relative  sm:flex-row items-start sm:items-center gap-2 md:mt-12">
             <input
               type="text"
               placeholder="Enter email"
-              className="border px-3 border-gray-300 outline-none h-10 w-full sm:w-72 rounded-md"
+              className="border px-8 py-6 border-gray-300 outline-none h-10 w-full sm:w-72 rounded-full"
             />
-            <button className="h-10 px-5 bg-amber-900 rounded-md hover:bg-amber-950">
+            <button className="h-10 px-5 absolute right-1 bg-orange-500 rounded-full hover:bg-orange-600">
               <span className="font-semibold text-white">Subscribe</span>
             </button>
           </div>
