@@ -18,14 +18,17 @@ class Navbar extends Component {
               </div>
               <div className="flex  gap-6 justify-center items-center">
                 <Link
-                  to="/property-listing"
+                  to="/home"
                   className="font-semibold text-base cursor-pointer"
                 >
                   Home
                 </Link>
-                <span className="font-semibold text-base cursor-pointer">
+                <Link
+                  to="/property-listing"
+                  className="font-semibold text-base cursor-pointer"
+                >
                   Property Listing
-                </span>
+                </Link>
                 <button className="p-2 bg-orange-500 rounded-sm cursor-pointer hover:bg-orange-600">
                   <span className="font-semibold text-base text-white">
                     Post Property
