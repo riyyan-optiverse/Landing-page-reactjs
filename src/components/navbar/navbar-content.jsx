@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { logoIcon } from "../../../../landing-page/src/assets/pngs";
+import { Link } from "react-router-dom";
+// import { logoIcon } from "../../../../landing-page/src/assets/pngs";
+
 class Navbar extends Component {
   render() {
     return (
@@ -8,10 +10,19 @@ class Navbar extends Component {
           <div className="flex gap-40">
             <div className="flex gap-56">
               <div>
-                <img src="src/assets/react.svg" alt="logo" className="h-12 w-auto pl-10" />
+                <img
+                  src="src/assets/react.svg"
+                  alt="logo"
+                  className="h-12 w-auto pl-10"
+                />
               </div>
               <div className="flex  gap-6 justify-center items-center">
-                <span className="font-semibold text-base cursor-pointer">Home</span>
+                <Link
+                  to="/property-listing"
+                  className="font-semibold text-base cursor-pointer"
+                >
+                  Home
+                </Link>
                 <span className="font-semibold text-base cursor-pointer">
                   Property Listing
                 </span>
@@ -20,8 +31,12 @@ class Navbar extends Component {
                     Post Property
                   </span>
                 </button>
-                <span className="font-semibold text-base cursor-pointer">Blog</span>
-                <span className="font-semibold text-base cursor-pointer">Contact us</span>
+                <span className="font-semibold text-base cursor-pointer">
+                  Blog
+                </span>
+                <span className="font-semibold text-base cursor-pointer">
+                  Contact us
+                </span>
               </div>
             </div>
             <div className="flex  justify-center items-center gap-3">
