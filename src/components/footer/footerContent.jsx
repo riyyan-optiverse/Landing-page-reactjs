@@ -1,8 +1,5 @@
-import React, { Component } from "react";
-
-class Footer extends Component {
-  render() {
-    return (
+const Footer = () => {
+  return (
       <div className="w-full bg-orange-500 mt-5">
         <div className="px-6 md:px-16 pt-7 flex flex-col md:flex-row gap-10 md:gap-44">
           <div className="flex flex-col gap-6">
@@ -49,6 +46,5 @@ class Footer extends Component {
         </div>
       </div>
     );
-  }
 }
 export default Footer;

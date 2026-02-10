@@ -1,8 +1,5 @@
-import React, { Component } from "react";
-
-class DropDown extends Component {
-  render() {
-    return (
+const DropDown = () => {
+   return (
       <div>
         <div className="flex gap-8">
           <div className="flex flex-col gap-2 mt-3">
@@ -70,6 +67,5 @@ class DropDown extends Component {
         </div>
       </div>
     );
-  }
 }
-export default DropDown;
+ export default DropDown;

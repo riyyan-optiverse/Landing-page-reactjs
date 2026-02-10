@@ -1,3 +1,3 @@
 export const PropertyListing = () => {
-    return <h1>Property Listing</h1>;
-}
+  return <h1>Property Listing</h1>;
+};
