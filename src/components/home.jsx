@@ -1,4 +1,5 @@
 import { InputField } from "./home-page-components/inputField";
+import { Lable } from "./home-page-components/lable";
 import MainCard from "./home-page-components/mainCard";
 import { ProductCards } from "./home-page-components/productCards";
 
@@ -6,12 +7,7 @@ export const Home = () => {
   return (
     <div className="bg-sky-50 w-11/12 max-w-6xl mx-auto  shadow-xl ">
       <MainCard />
-      <div className="flex justify-center items-center">
-        <div className="w-[70%] h-10  bg-yellow-400  pl-10 flex items-center">
-          <p className="text-lg font-semibold text-white">Pricing</p>
-        </div>
-        <div className="w-[30%] h-10 bg-sky-100 "></div>
-      </div>
+      <Lable />
       <div className="mt-4 flex justify-end pr-10">
         <InputField />
       </div>

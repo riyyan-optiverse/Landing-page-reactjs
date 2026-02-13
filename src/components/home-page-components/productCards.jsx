@@ -1,4 +1,3 @@
-import { waterBottle } from "../../assets/pngs";
 import { cardData } from "./static-data";
 
 export const ProductCards = () => {
