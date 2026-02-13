@@ -1,5 +1,5 @@
 import { InputField } from "./home-page-components/inputField";
-import { Lable } from "./home-page-components/lable";
+import { Lable } from "./home-page-components/label";
 import MainCard from "./home-page-components/mainCard";
 import { ProductCards } from "./home-page-components/productCards";
 
