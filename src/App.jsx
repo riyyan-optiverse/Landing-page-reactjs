@@ -5,6 +5,8 @@ import { PropertyListing } from "./components/propertyListing";
 import { PostProperty } from "./components/postProperty";
 import { Blog } from "./components/blog";
 import { ContactUs } from "./components/contactUs";
+import { LoginPage } from "./components/loginPage";
+import { SignUpPage } from "./components/signUpPage";
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
       <Route path="/post-property" element={<PostProperty />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/login" element={<LoginPage />} />
+       <Route path="/sign-up" element={<SignUpPage />} />
       <Route path="/" element={<Card />} />
     </Routes>
   );

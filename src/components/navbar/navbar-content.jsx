@@ -50,14 +50,18 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex  justify-center items-center gap-3">
-            <button className="p-2 bg-slate-200 rounded-sm cursor-pointer hover:bg-slate-300">
+            <Link
+            to="/login"
+             className="p-2 bg-slate-200 rounded-sm cursor-pointer hover:bg-slate-300">
               <span className="font-semibold text-base ">Login</span>
-            </button>
-            <button className="p-2 bg-orange-500 rounded-sm cursor-pointer hover:bg-orange-600">
+            </Link>
+            <Link 
+            to="/sign-up"
+            className="p-2 bg-orange-500 rounded-sm cursor-pointer hover:bg-orange-600">
               <span className="font-semibold text-base text-white ">
                 SignUp
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
