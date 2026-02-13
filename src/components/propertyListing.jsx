@@ -1,7 +1,17 @@
 import { CustReviewLabel } from "./property-listing-components/customerReviewLabel";
-import { ContactUsLabel, GoogReviewLabel } from "./property-listing-components/googleReviewLabel";
-import { CustomerReview, ParaGraphData } from "./property-listing-components/paragraphData";
-import ReviewCard, { CustReviewCard } from "./property-listing-components/reviewCard";
+import {
+  ContactUsLabel,
+  GoogReviewLabel,
+} from "./property-listing-components/googleReviewLabel";
+import InputFiel from "./property-listing-components/inputField";
+import {
+  CustomerReview,
+  ParaGraphData,
+} from "./property-listing-components/paragraphData";
+import ReviewCard, {
+  CustReviewCard,
+} from "./property-listing-components/reviewCard";
+import { SubmitButton } from "./property-listing-components/submitButton";
 import Table from "./property-listing-components/table";
 
 export const PropertyListing = () => {
@@ -12,22 +22,26 @@ export const PropertyListing = () => {
         <GoogReviewLabel />
       </div>
       <div className="flex flex-col items-start">
-      <ParaGraphData />
-      <div className="p-1 md:pr-2 md:pl-16 mt-4">
-        <ReviewCard />
-      </div>
+        <ParaGraphData />
+        <div className="p-1 md:pr-2 md:pl-16 mt-4">
+          <ReviewCard />
+        </div>
       </div>
       <div className="mt-10">
-       <CustReviewLabel/>
+        <CustReviewLabel />
       </div>
       <div className="flex flex-col items-start">
-      <CustomerReview/>
-       <div className="p-1 md:pl-16 mt-4">
-        <CustReviewCard/>
-      </div>
+        <CustomerReview />
+        <div className="p-1 md:pl-16 mt-4">
+          <CustReviewCard />
+        </div>
       </div>
       <div className="mt-10">
-       <ContactUsLabel/>
+        <ContactUsLabel />
+      </div>
+      <div className="p-1 md:px-16 mt-4">
+        <InputFiel />
+        <SubmitButton />
       </div>
     </div>
   );

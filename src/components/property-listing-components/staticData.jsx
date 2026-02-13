@@ -46,3 +46,26 @@ export const CustReviewData = [
       "Clean Mineral water, fair prices and reliable distribution - what else can you ask for?",
   },
 ];
+
+export const InputFieldData = [
+  {
+    label: "Name:",
+    placeholder: "Harry",
+    type: "text",
+  },
+  {
+    label: "Phone No:",
+    placeholder: "+44 123456678",
+    type: "tel",
+  },
+  {
+    label: "Email:",
+    placeholder: "riyyanoptiverse@gmail.com",
+    type: "email",
+  },
+  {
+    label: "Subject:",
+    placeholder: "Other",
+    type: "text",
+  },
+];
