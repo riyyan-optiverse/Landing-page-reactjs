@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div className="bg-slate-50 w-12/12 h-20 flex  justify-start items-center ">
-        <div className="flex gap-40">
-          <div className="flex gap-56">
+      <div className="bg-slate-50 w-[100%] md:h-20 flex  justify-start items-center ">
+       <div className="flex w-full items-center justify-between p-2 md:px-12 flex-wrap">
+          
             <div>
               <img
                 src="src/assets/react.svg"
                 alt="logo"
-                className="h-12 w-auto pl-10"
+                className="h-12 w-auto "
               />
             </div>
-            <div className="flex  gap-6 justify-center items-center">
+            <div className="hidden md:flex gap-6 justify-start items-center">
               <Link
                 to="/home"
                 className="font-semibold text-base cursor-pointer hover:text-blue-500"
@@ -48,7 +48,7 @@ const Navbar = () => {
                 Contact us
               </Link>
             </div>
-          </div>
+          
           <div className="flex  justify-center items-center gap-3">
             <Link
             to="/login"

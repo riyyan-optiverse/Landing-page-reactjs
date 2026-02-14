@@ -19,7 +19,7 @@ const Card = () => {
           Enter your personal detail
         </p>
         <InputFields />
-        <div className="mt-4">
+        <div className="mt-4 flex justify-center md:justify-start">
           <FormButton />
         </div>
       </div>

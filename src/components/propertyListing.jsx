@@ -41,7 +41,9 @@ export const PropertyListing = () => {
       </div>
       <div className="p-1 md:px-16 mt-4">
         <InputFiel />
+        <div className="flex justify-center md:justify-start">
         <SubmitButton />
+        </div>
       </div>
     </div>
   );

@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <div className="w-full bg-orange-500 mt-5">
       <div className="px-6 md:px-16 pt-7 flex flex-col items-center md:flex-row gap-10 md:gap-44">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 ">
           <p className="text-2xl font-medium text-white">Quick Links</p>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 items-center md:items-start">
             <Link
               to="/home"
               className="text-lg text-white cursor-pointer hover:text-blue-500"
@@ -39,7 +39,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 items-center md:items-start">
           <p className="text-2xl font-medium text-white">Other Links</p>
           <div className="flex flex-col gap-1">
             <p className="text-lg text-white">Facebook</p>
@@ -49,13 +49,13 @@ const Footer = () => {
             <p className="text-lg text-white">Telegram</p>
           </div>
         </div>
-        <div className="flex flex-col relative  sm:flex-row items-start sm:items-center gap-2 md:mt-12">
+        <div className="mx-auto flex flex-col relative  sm:flex-row items-start sm:items-center gap-2 md:mt-12 overflow-hidden">
           <input
             type="text"
             placeholder="Enter email"
-            className="border px-8 py-6 border-gray-300 outline-none h-10 w-full sm:w-72 rounded-full"
+            className="border max-w-96 p-6 border-gray-300 outline-none h-10 w-full sm:w-72 rounded-full "
           />
-          <button className="h-10 px-5 absolute right-1 top-1 bg-orange-500 rounded-full hover:bg-orange-600">
+          <button className="h-10 px-4 absolute right-1 top-1 bg-orange-500 rounded-full hover:bg-orange-600 ">
             <span className="font-semibold text-white">Subscribe</span>
           </button>
         </div>
