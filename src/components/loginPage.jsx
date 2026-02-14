@@ -8,9 +8,9 @@ export const LoginPage = () => {
         <p className="text-3xl font-semibold ">Login</p>
       </div>
       <LoginInputField />
-      <div className="p-2 md:px-9 ">
+      <div className="p-2 md:px-9 flex gap-1 items-center">
         <input type="checkbox" className="cursor-pointer" />
-        <span className="text-lg font-semibold"> Remember</span>
+        <span className="text-base font-semibold"> Remember</span>
       </div>
       <div className="p-2 md:px-9">
         <button className="w-[100%] p-2 bg-blue-600 rounded-sm hover:bg-blue-700 ">
