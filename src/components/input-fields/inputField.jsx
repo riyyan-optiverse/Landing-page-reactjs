@@ -3,7 +3,7 @@ import TextArea from "./textArea";
 const InputFields = () => {
   return (
     <>
-      <div className="mt-6 grid grid-cols-3 gap-5">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {fields.map((field, index) => (
           <div key={index} className="flex flex-col gap-1">
             <label className="text-lg font-semibold">{field.label}</label>

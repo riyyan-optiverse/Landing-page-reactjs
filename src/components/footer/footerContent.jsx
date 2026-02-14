@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="w-full bg-orange-500 mt-5">
-      <div className="px-6 md:px-16 pt-7 flex flex-col md:flex-row gap-10 md:gap-44">
+      <div className="px-6 md:px-16 pt-7 flex flex-col items-center md:flex-row gap-10 md:gap-44">
         <div className="flex flex-col gap-6">
           <p className="text-2xl font-medium text-white">Quick Links</p>
           <div className="flex flex-col gap-1">
@@ -55,7 +55,7 @@ const Footer = () => {
             placeholder="Enter email"
             className="border px-8 py-6 border-gray-300 outline-none h-10 w-full sm:w-72 rounded-full"
           />
-          <button className="h-10 px-5 absolute right-1 bg-orange-500 rounded-full hover:bg-orange-600">
+          <button className="h-10 px-5 absolute right-1 top-1 bg-orange-500 rounded-full hover:bg-orange-600">
             <span className="font-semibold text-white">Subscribe</span>
           </button>
         </div>

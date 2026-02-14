@@ -19,7 +19,7 @@ export const SignUpPage = () => {
       </div>
       <div className="mt-2 p-2 md:px-9 flex gap-1 justify-center">
         <span className="font-medium text-sm text-gray-600">
-          Don't have an account?
+         Already have an account?
         </span>
         <Link
           to="/login"
