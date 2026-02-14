@@ -6,7 +6,7 @@ export const ProductCards = () => {
       {cardData.map((card, index) => (
         <div
           key={index}
-          className="w-40 h-auto bg-white shadow-md rounded-sm p-4 flex flex-col  "
+          className="w-40 h-auto bg-white shadow-md rounded-sm p-4 flex flex-col cursor-pointer hover:shadow-2xl transition-shadow duration-300 "
         >
           <img
             src={card.img}

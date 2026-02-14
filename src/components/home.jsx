@@ -8,7 +8,7 @@ export const Home = () => {
     <div className="bg-sky-50 w-11/12 max-w-6xl mx-auto  shadow-xl ">
       <MainCard />
       <Lable />
-      <div className="mt-4 flex justify-end pr-10">
+      <div className="mt-4 flex justify-end md:pr-10 px-2">
         <InputField />
       </div>
       <ProductCards />

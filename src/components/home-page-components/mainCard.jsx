@@ -2,7 +2,7 @@ import { officeImage } from "../../assets/pngs";
 import paraData from "./static-data";
 const MainCard = () => {
   return (
-    <div className="p-5 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-10 justify-center items-start">
+    <div className="p-5 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-10 justify-center items-start  ">
       <div className="flex flex-col gap-2 ">
         {paraData.map((para, index) => (
           <div key={index} className="flex flex-col ">

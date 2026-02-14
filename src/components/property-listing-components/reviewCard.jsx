@@ -6,7 +6,7 @@ const ReviewCard = () => {
       {ReviewCardData.map((card, index) => (
         <div
           key={index}
-          className=" max-w-64 mx-auto bg-white shadow-lg p-3 rounded-md cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+          className="max-w-80 mx-auto bg-white shadow-lg p-3 rounded-md cursor-pointer hover:shadow-2xl transition-shadow duration-300"
         >
           <div className="flex gap-2 items-center">
             <div className="w-12 h-12 bg-gray-500 rounded-full"></div>

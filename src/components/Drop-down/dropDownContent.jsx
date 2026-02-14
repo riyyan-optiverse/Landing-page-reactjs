@@ -3,7 +3,7 @@ const DropDown = () => {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-center mt-4  ">
           <div className="flex flex-col gap-2 justify-center ">
-            <label className="text-lg font-semibold">Sale </label>
+            <label className="text-lg font-semibold">Sale ya Rent</label>
             <select className="max-w-md h-10 px-4 border outline-none border-gray-300 rounded-md">
               <option value="sale">Sale</option>
               <option value="rent">Rent</option>
