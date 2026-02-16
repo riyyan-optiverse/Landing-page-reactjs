@@ -1,4 +1,4 @@
-import Navbar from "../navbar/navbar-content";
+
 import DropDown from "../Drop-down/dropDownContent";
 import CardContent from "./cardContent";
 import InputFields from "../input-fields/inputField";
@@ -9,7 +9,7 @@ import Footer from "../footer/footerContent";
 const Card = () => {
   return (
     <div className="bg-white w-11/12 h-auto max-w-6xl mx-auto  shadow-xl ">
-      <Navbar />
+      
       <CardContent />
       <hr className="border-t border-gray-300 mt-10 mb-6" />
       <div className="p-2 md:px-16">

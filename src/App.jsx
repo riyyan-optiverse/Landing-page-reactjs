@@ -7,9 +7,13 @@ import { Blog } from "./components/blog";
 import { ContactUs } from "./components/contactUs";
 import { LoginPage } from "./components/loginPage";
 import { SignUpPage } from "./components/signUpPage";
+import Navbar from "./components/navbar/navbar-content";
 
 const App = () => {
   return (
+      
+ <>
+ <Navbar/>
     <Routes>
       <Route path="/home" element={<Home />} />
       <Route path="/property-listing" element={<PropertyListing />} />
@@ -20,6 +24,8 @@ const App = () => {
        <Route path="/sign-up" element={<SignUpPage />} />
       <Route path="/" element={<Card />} />
     </Routes>
+    </>
+   
   );
 };
 
