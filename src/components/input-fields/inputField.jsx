@@ -8,6 +8,7 @@ const InputFields = () => {
           <div key={index} className="flex flex-col gap-1">
             <label className="text-lg font-semibold">{field.label}</label>
             <input
+             key={index}
               type={field.type}
               placeholder={field.placeholder}
               className={`${field.width} h-10 border outline-none border-b-gray-300 rounded-md px-5`}

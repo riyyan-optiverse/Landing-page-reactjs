@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { href, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { logoIcon } from "../../../../landing-page/src/assets/pngs";
 const navLinks = [
   {
@@ -24,10 +24,10 @@ const navLinks = [
   },
 ];
 const Navbar = () => {
-  const [count, setcount] = useState();
+  const [active, setactive] = useState("home");
   return (
     <>
-      <div className="bg-slate-50 w-[100%] md:h-20 flex  justify-start items-center ">
+      <div className="bg-slate-50  w-[100%] md:h-20 flex  justify-start items-center ">
         <div className="flex w-full items-center justify-between p-2 md:px-12 flex-wrap">
           <div>
             <img
@@ -37,17 +37,24 @@ const Navbar = () => {
             />
           </div>
           <div className="hidden md:flex gap-6 justify-start items-center">
-           
-           {navLinks.map((link, index) => {
-            return(
-               <Link
-              to={`/${link.href}`}
-              className="font-semibold text-base cursor-pointer hover:text-blue-500"
-            >
-              {link.text}
-            </Link>
-            )
-           })}
+            {navLinks.map((link, index) => {
+              return (
+                <Link
+                  key={index}
+                  to={`/${link.href}`}
+                  className={`font-semibold text-base cursor-pointer
+                  ${
+                    active === link.href
+                      ? "text-blue-600 border-b-2 border-blue-600"
+                      : "text-black hover:text-blue-500"
+                  }
+                `}
+                  onClick={() => setactive(link.href)}
+                >
+                  {link.text}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="flex  justify-center items-center gap-3">

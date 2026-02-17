@@ -1,3 +1,3 @@
 export const PostProperty = () => {
-  return <h1>Post Property</h1>;
+  return <h1>blog</h1>;
 };
