@@ -24,7 +24,7 @@ const footerLinks = [
   },
 ];
 const Footer = () => {
-  const [active, setactive] = useState("home");
+  const [active, setactive] = useState("");
   return (
     <div className="w-full bg-orange-500 mt-5">
       <div className="px-6 md:px-16 pt-7 flex flex-col items-center md:flex-row gap-10 md:gap-44">

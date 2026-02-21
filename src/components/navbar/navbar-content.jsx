@@ -24,7 +24,7 @@ const navLinks = [
   },
 ];
 const Navbar = () => {
-  const [active, setactive] = useState("home");
+  const [active, setactive] = useState("");
   return (
     <>
       <div className="bg-slate-50  w-[100%] md:h-20 flex  justify-start items-center ">
