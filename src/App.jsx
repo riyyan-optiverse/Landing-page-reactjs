@@ -4,7 +4,7 @@ import { buttonData } from "./components/staticData";
 function App() {
   const [color, setcolor] = useState("");
   return (
-    <div
+    <div 
       className="w-full h-screen duration-1000"
       style={{ backgroundColor: color }}
     >
