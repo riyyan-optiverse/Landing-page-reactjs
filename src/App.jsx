@@ -15,7 +15,7 @@ function App() {
               <button
                 key={index}
                 onClick={() => setcolor(data.functColor)}
-                className={`outline-none px-5 py-2 rounded-md text-${data.textColor} shadow-lg hover:shadow-2xl duration-300`}
+                className={`outline-none px-5 py-2 rounded-md  ${data.textColor} shadow-lg hover:shadow-2xl duration-300`}
                 style={{ backgroundColor: data.stylColor }}
               >
                 {data.buttonName}
