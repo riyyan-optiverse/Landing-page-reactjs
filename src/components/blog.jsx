@@ -123,15 +123,40 @@ export const Blog = () => {
 // let myVar = myFunc(10,12)
 // console.log(myVar)
 
-function myFunc(username) {
-  if(username === undefined || username === "") {
-    return "Enter your name first"
-  }
-return `${username} Just Logged In`
+// function myFunc(username) {
+//   if(username === undefined || username === "") {
+//     return "Enter your name first"
+//   }
+// return `${username} Just Logged In`
+// }
+// console.log(myFunc(""))
+ 
+// function calculateCartPrice (val1, val2,...num1) {
+//              return num1
+// }
+// console.log(calculateCartPrice(12, 23, 45, 600))
+
+const user = {
+  userName: "Riyyan",
+  price: 1600
 }
-console.log(myFunc(""))
 
+function handleObject(anyObj) {
+  console.log(`My name is ${anyObj.userName} and price is ${anyObj.price}`)
+}
+// handleObject(user)
+handleObject({
+  userName: "Alriyyan",
+  price: 2000
+})
 
+const myNewArray = [1200, 500, 400]
+function returnSecondValue (getArray) {
+        return getArray[0]
+}
+// console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([1223, 678, 900]))
+ 
 
 
   return <h1>Blog</h1>;
