@@ -35,6 +35,27 @@ const DashBoard = () => {
             marks: "900/1100",
           },
           {
+            rollNumber: 125,
+            name: "Ayesha",
+            age: 23,
+            email: "ayesha@gmail.com",
+            marks: "1040/1100",
+          },
+          {
+            rollNumber: 126,
+            name: "Talha",
+            age: 18,
+            email: "talha@gmail.com",
+            marks: "920/1100",
+          },
+          {
+            rollNumber: 127,
+            name: "Muqeet",
+            age: 21,
+            email: "muqeet@gmail.com",
+            marks: "1010/1100",
+          },
+          {
             rollNumber: 109,
             name: "Zain",
             age: 19,
@@ -125,14 +146,14 @@ const DashBoard = () => {
 
             <button
               onClick={handleUpdate}
-              className="bg-green-500 text-white px-3 py-1 rounded m-1"
+              className="bg-green-500 text-white px-3 py-1 rounded m-1 hover:bg-green-600"
             >
               Save
             </button>
 
             <button
               onClick={() => setEditStudent(null)}
-              className="bg-gray-400 px-3 py-1 rounded m-1"
+              className="bg-gray-400 px-3 py-1 rounded m-1 hover:bg-gray-500"
             >
               Cancel
             </button>
