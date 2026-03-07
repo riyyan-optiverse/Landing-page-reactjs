@@ -76,14 +76,7 @@ const DashBoard = () => {
     setEditStudent(student);
     setFormData(student);
   };
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  
   const handleUpdate = () => {
     const updatedStudents = students.map((s) =>
       s.rollNumber === editStudent.rollNumber ? formData : s,
@@ -115,7 +108,7 @@ const DashBoard = () => {
             <input
               name="name"
               value={formData.name}
-              onChange={handleChange}
+              onChange={(e) => setFormData({...formData,name: e.target.value})}
               placeholder="Name"
               className="border p-1 m-1 outline-none"
             />
@@ -123,7 +116,7 @@ const DashBoard = () => {
             <input
               name="age"
               value={formData.age}
-              onChange={handleChange}
+              onChange={(e) => setFormData({...formData,age: e.target.value})}
               placeholder="Age"
               className="border p-1 m-1 outline-none"
             />
@@ -131,7 +124,7 @@ const DashBoard = () => {
             <input
               name="email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={(e) => setFormData({...formData,email: e.target.value})}
               placeholder="Email"
               className="border p-1 m-1 outline-none"
             />
@@ -139,7 +132,7 @@ const DashBoard = () => {
             <input
               name="marks"
               value={formData.marks}
-              onChange={handleChange}
+              onChange={(e) => setFormData({...formData,marks: e.target.value})}
               placeholder="Marks"
               className="border p-1 m-1 outline-none"
             />
