@@ -76,7 +76,7 @@ const DashBoard = () => {
     setEditStudent(student);
     setFormData(student);
   };
-  
+
   const handleUpdate = () => {
     const updatedStudents = students.map((s) =>
       s.rollNumber === editStudent.rollNumber ? formData : s,
@@ -93,6 +93,12 @@ const DashBoard = () => {
     setStudents(updated);
     localStorage.setItem("students", JSON.stringify(updated));
   };
+  const btnMoveToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="bg-white w-11/12 h-auto max-w-6xl mx-auto shadow-xl p-4">
@@ -108,7 +114,9 @@ const DashBoard = () => {
             <input
               name="name"
               value={formData.name}
-              onChange={(e) => setFormData({...formData,name: e.target.value})}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               placeholder="Name"
               className="border p-1 m-1 outline-none"
             />
@@ -116,7 +124,9 @@ const DashBoard = () => {
             <input
               name="age"
               value={formData.age}
-              onChange={(e) => setFormData({...formData,age: e.target.value})}
+              onChange={(e) =>
+                setFormData({ ...formData, age: e.target.value })
+              }
               placeholder="Age"
               className="border p-1 m-1 outline-none"
             />
@@ -124,7 +134,9 @@ const DashBoard = () => {
             <input
               name="email"
               value={formData.email}
-              onChange={(e) => setFormData({...formData,email: e.target.value})}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               placeholder="Email"
               className="border p-1 m-1 outline-none"
             />
@@ -132,7 +144,9 @@ const DashBoard = () => {
             <input
               name="marks"
               value={formData.marks}
-              onChange={(e) => setFormData({...formData,marks: e.target.value})}
+              onChange={(e) =>
+                setFormData({ ...formData, marks: e.target.value })
+              }
               placeholder="Marks"
               className="border p-1 m-1 outline-none"
             />
@@ -173,7 +187,10 @@ const DashBoard = () => {
                 <td>{s.marks}</td>
                 <td className="space-x-2 p-1">
                   <button
-                    onClick={() => handleEdit(s)}
+                    onClick={() => {
+                      handleEdit(s);
+                      btnMoveToTop(); 
+                    }}
                     className="bg-yellow-400 hover:bg-yellow-500 px-2 rounded"
                   >
                     Edit
