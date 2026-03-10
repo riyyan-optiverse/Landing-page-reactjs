@@ -88,76 +88,166 @@ export const Blog = () => {
   //   d: 4,
   // };
   // const myObj3 = Object.assign({}, myObj1, myObj2); //first way(not recommened)
-//   const myObj3 = { ...myObj1, ...myObj2 };
-//   console.log(myObj3);
+  //   const myObj3 = { ...myObj1, ...myObj2 };
+  //   console.log(myObj3);
 
-//   const users = [
-//     {
-//       id: 23,
-//       name: "Ali",
-//     },
-//     {
-//       id: 24,
-//       name: "Ali",
-//     },
-//     {
-//       id: 2,
-//       name: "Ali",
-//     },
-//   ];
-//   console.log(users[2].id);
-// console.log(Object.keys(myObj))
-// console.log(Object.values(myObj))
-// console.log(Object.entries(myObj))
-// console.log(myObj.hasOwnProperty("email"))
+  //   const users = [
+  //     {
+  //       id: 23,
+  //       name: "Ali",
+  //     },
+  //     {
+  //       id: 24,
+  //       name: "Ali",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "Ali",
+  //     },
+  //   ];
+  //   console.log(users[2].id);
+  // console.log(Object.keys(myObj))
+  // console.log(Object.values(myObj))
+  // console.log(Object.entries(myObj))
+  // console.log(myObj.hasOwnProperty("email"))
 
-// function myFunc(no1,no2) {
-//   console.log(no1 + no2)
-// }
-// let myVar = myFunc(10,12)
-// console.log(myVar)   //wrong
+  // function myFunc(no1,no2) {
+  //   console.log(no1 + no2)
+  // }
+  // let myVar = myFunc(10,12)
+  // console.log(myVar)   //wrong
 
-// function myFunc(no1,no2) {
-//   return no1 + no2
-// }
-// let myVar = myFunc(10,12)
-// console.log(myVar)
+  // function myFunc(no1,no2) {
+  //   return no1 + no2
+  // }
+  // let myVar = myFunc(10,12)
+  // console.log(myVar)
 
-// function myFunc(username) {
-//   if(username === undefined || username === "") {
-//     return "Enter your name first"
-//   }
-// return `${username} Just Logged In`
-// }
-// console.log(myFunc(""))
- 
-// function calculateCartPrice (val1, val2,...num1) {
-//              return num1
-// }
-// console.log(calculateCartPrice(12, 23, 45, 600))
+  // function myFunc(username) {
+  //   if(username === undefined || username === "") {
+  //     return "Enter your name first"
+  //   }
+  // return `${username} Just Logged In`
+  // }
+  // console.log(myFunc(""))
 
-const user = {
-  userName: "Riyyan",
-  price: 1600
-}
+  // function calculateCartPrice (val1, val2,...num1) {
+  //              return num1
+  // }
+  // console.log(calculateCartPrice(12, 23, 45, 600))
 
-function handleObject(anyObj) {
-  console.log(`My name is ${anyObj.userName} and price is ${anyObj.price}`)
-}
-// handleObject(user)
-handleObject({
-  userName: "Alriyyan",
-  price: 2000
-})
+  // const user = {
+  //   userName: "Riyyan",
+  //   price: 1600
+  // }
 
-const myNewArray = [1200, 500, 400]
-function returnSecondValue (getArray) {
-        return getArray[0]
-}
-// console.log(returnSecondValue(myNewArray))
-console.log(returnSecondValue([1223, 678, 900]))
- 
+  // function handleObject(anyObj) {
+  //   console.log(`My name is ${anyObj.userName} and price is ${anyObj.price}`)
+  // }
+  // handleObject(user)
+  // handleObject({
+  //   userName: "Alriyyan",
+  //   price: 2000
+  // })
 
+  // const myNewArray = [1200, 500, 400]
+  // function returnSecondValue (getArray) {
+  //         return getArray[0]
+  // }
+  // console.log(returnSecondValue(myNewArray))
+  // console.log(returnSecondValue([1223, 678, 900]))
 
+  // (function chai() {
+  //   console.log("Hello World")     //IIFE "immediatley invoked function"
+  // })();
+
+  // ( () => {
+  //   console.log("Hello World 2 ")    //always use semicolon in the end of IIFE
+  // })();
+
+  //  ( (name) => {
+  //   console.log(`Hello World ${name}`)
+  // })("Riyyan");
+
+  // let arr = [1, 2, 3, 4, 5]
+
+  // for(const num of arr) {
+  //   console.log(num)
+  // }
+
+  // let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  // const myDta = myArr.filter((num) => num > 4);
+  // console.log(myDta);
+
+  const newArray = [
+    {
+      rollNumber: 123,
+      name: "Ali",
+      age: 21,
+      email: "ali@gmail.com",
+      marks: "820/1100",
+    },
+    {
+      rollNumber: 90,
+      name: "Usama",
+      age: 19,
+      email: "usama@gmail.com",
+      marks: "920/1100",
+    },
+    {
+      rollNumber: 124,
+      name: "Sara",
+      age: 25,
+      email: "sara@gmail.com",
+      marks: "900/1100",
+    },
+    {
+      rollNumber: 109,
+      name: "Zain",
+      age: 17,
+      email: "zain@gmail.com",
+      marks: "1020/1100",
+    },
+  ];
+
+const newArrayData = newArray.filter((a) => a.age > 20)
+
+// console.log(newArrayData) 
+
+// let anewArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
+// let anewArrayData = anewArray.map((num) => num + 10 )
+// console.log(anewArrayData) 
+// let smthData = anewArray.map((num) => num * 5 ).map((num) =>num +1).filter((num) => num > 20) 
+// Chaining
+// console.log(smthData) 
+
+// const myNums = [1,2,3,4,5]
+
+// const myTotal = myNums.reduce((acc, num) => acc + num,0 )
+//  console.log(myTotal)
+
+let mycourses = [
+  {
+    courseName: "JS Course",
+    coursePrice: 2000,
+  },
+   {
+    courseName: "PY Course",
+    coursePrice: 5999,
+  },
+   {
+    courseName: "Mobile Dev Course",
+    coursePrice: 12000,
+  },
+   {
+    courseName: "Data Science Course",
+    coursePrice: 15000,
+  },
+]
+
+const myPrice = mycourses.reduce((acc, item) => acc + item.coursePrice, 0)
+console.log(myPrice)
   return <h1>Blog</h1>;
 };
