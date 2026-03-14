@@ -180,74 +180,154 @@ export const Blog = () => {
   // const myDta = myArr.filter((num) => num > 4);
   // console.log(myDta);
 
-  const newArray = [
-    {
-      rollNumber: 123,
-      name: "Ali",
-      age: 21,
-      email: "ali@gmail.com",
-      marks: "820/1100",
-    },
-    {
-      rollNumber: 90,
-      name: "Usama",
-      age: 19,
-      email: "usama@gmail.com",
-      marks: "920/1100",
-    },
-    {
-      rollNumber: 124,
-      name: "Sara",
-      age: 25,
-      email: "sara@gmail.com",
-      marks: "900/1100",
-    },
-    {
-      rollNumber: 109,
-      name: "Zain",
-      age: 17,
-      email: "zain@gmail.com",
-      marks: "1020/1100",
-    },
-  ];
+  //   const newArray = [
+  //     {
+  //       rollNumber: 123,
+  //       name: "Ali",
+  //       age: 21,
+  //       email: "ali@gmail.com",
+  //       marks: "820/1100",
+  //     },
+  //     {
+  //       rollNumber: 90,
+  //       name: "Usama",
+  //       age: 19,
+  //       email: "usama@gmail.com",
+  //       marks: "920/1100",
+  //     },
+  //     {
+  //       rollNumber: 124,
+  //       name: "Sara",
+  //       age: 25,
+  //       email: "sara@gmail.com",
+  //       marks: "900/1100",
+  //     },
+  //     {
+  //       rollNumber: 109,
+  //       name: "Zain",
+  //       age: 17,
+  //       email: "zain@gmail.com",
+  //       marks: "1020/1100",
+  //     },
+  //   ];
 
-const newArrayData = newArray.filter((a) => a.age > 20)
+  // const newArrayData = newArray.filter((a) => a.age > 20)
 
-// console.log(newArrayData) 
+  // console.log(newArrayData)
 
-// let anewArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+  // let anewArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// let anewArrayData = anewArray.map((num) => num + 10 )
-// console.log(anewArrayData) 
-// let smthData = anewArray.map((num) => num * 5 ).map((num) =>num +1).filter((num) => num > 20) 
-// Chaining
-// console.log(smthData) 
+  // let anewArrayData = anewArray.map((num) => num + 10 )
+  // console.log(anewArrayData)
+  // let smthData = anewArray.map((num) => num * 5 ).map((num) =>num +1).filter((num) => num > 20)
+  // Chaining
+  // console.log(smthData)
 
-// const myNums = [1,2,3,4,5]
+  // const myNums = [1,2,3,4,5]
 
-// const myTotal = myNums.reduce((acc, num) => acc + num,0 )
-//  console.log(myTotal)
+  // const myTotal = myNums.reduce((acc, num) => acc + num,0 )
+  //  console.log(myTotal)
 
-let mycourses = [
-  {
-    courseName: "JS Course",
-    coursePrice: 2000,
-  },
-   {
-    courseName: "PY Course",
-    coursePrice: 5999,
-  },
-   {
-    courseName: "Mobile Dev Course",
-    coursePrice: 12000,
-  },
-   {
-    courseName: "Data Science Course",
-    coursePrice: 15000,
-  },
-]
+  // let mycourses = [
+  //   {
+  //     courseName: "JS Course",
+  //     coursePrice: 2000,
+  //   },
+  //    {
+  //     courseName: "PY Course",
+  //     coursePrice: 5999,
+  //   },
+  //    {
+  //     courseName: "Mobile Dev Course",
+  //     coursePrice: 12000,
+  //   },
+  //    {
+  //     courseName: "Data Science Course",
+  //     coursePrice: 15000,
+  //   },
+  // ]
 
-const myPrice = mycourses.reduce((acc, item) => acc + item.coursePrice, 0)
-console.log(myPrice)
+  // const myPrice = mycourses.reduce((acc, item) => acc + item.coursePrice, 0)
+  // console.log(myPrice)
+
+  // const promiseOne = new Promise(function (resolve, reject) {
+  //   setTimeout(() => {
+  //     resolve({ name: "Alriyyan", rollNo: 3707 });
+  //   }, 1000);
+  // });
+  // promiseOne.then((user) => {
+  //   // console.log(user);
+  // });
+
+  // const promiseTwo = new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  //     let error = false;
+  //     if (!error) {
+  //       resolve({ name: "Riyyan", rollNo: 3707 });
+  //     } else {
+  //       reject("Error: Something Went Wrong");
+  //     }
+  //   }, 1000);
+  // });
+  // promiseTwo
+  //   .then((user) => {
+  //     console.log(user);
+  //     return user.username;
+  //   })
+  //   .then((username) => {
+  //     console.log(username);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  //   .finally(() => {
+  //     console.log("The promise is either resolved or rejected");
+  //   });
+
+  // const promiseThree = new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  //     let error = false;
+  //     if (!error) {
+  //       resolve({ name: "javaScript", rollNo: 3707 });
+  //     } else {
+  //       reject("Error: JS Went Wrong");
+  //     }
+  //   }, 1000);
+  // });
+
+  // async function consumePromiseThree() {
+  //   try {
+  //     const response = await promiseThree;
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  // consumePromiseThree();
+
+  async function getAllUsers() {
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users",
+      );
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log("E:", error);
+    }
+  }
+  // getAllUsers(); 
+
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
   return <h1>Blog</h1>;
 };
