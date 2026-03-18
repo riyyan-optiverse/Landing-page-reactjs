@@ -305,29 +305,43 @@ export const Blog = () => {
   // }
   // consumePromiseThree();
 
-  async function getAllUsers() {
-    try {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users",
-      );
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log("E:", error);
-    }
-  }
-  // getAllUsers(); 
+  // async function getAllUsers() {
+  //   try {
+  //     const response = await fetch(
+  //       "https://jsonplaceholder.typicode.com/users",
+  //     );
+  //     const data = await response.json();
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log("E:", error);
+  //   }
+  // }
+  // // getAllUsers(); 
 
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  // fetch("https://jsonplaceholder.typicode.com/users")
+  //   .then((response) => {
+  //     return response.json();
+  //   })
+  //   .then((data) => {
+  //     console.log(data);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+
+          //****************************** ProtoType ******************************
+String.prototype.trueLenght = function () {
+  console.log(`Total lenght is ${this.trim().length}`)
+}
+
+let myString = "Alriyyan          "
+myString.trueLenght()
+"ali".trueLenght()
+
+
+
+
+
 
   return <h1>Blog</h1>;
 };
