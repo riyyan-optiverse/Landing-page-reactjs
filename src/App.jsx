@@ -1,93 +1,67 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-const App = () => {
-  const [length, setLength] = useState(8);
-  const [numberAllowed, setNumberAllowed] = useState(false);
-  const [charAllowed, setCharAllowed] = useState(false);
-  const [password, setPassword] = useState("");
-  const passwordRef = useRef(null);
+import { useState, useEffect } from "react";
+const APP = () => {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState("");
 
-  const passwordGenerator = useCallback(() => {
-    let pass = "";
-    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
-    if (numberAllowed) str += 1234567890;
-    if (charAllowed) str += "!@#$%^&*()_-+{}~`";
-
-    for (let i = 0; i <= length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1);
-      pass += str.charAt(char);
+  const addToDo = () => {
+    if (input.trim() === "") return;
+    else {
+      const updatedTodos = [...todos, input];
+      setTodos(updatedTodos);
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
+      setInput("");
     }
-    setPassword(pass);
-  }, [length, numberAllowed, charAllowed, setPassword]);
+  };
 
   useEffect(() => {
-    passwordGenerator();
-  }, [length, numberAllowed, charAllowed, passwordGenerator]);
+    const updatedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+    setTodos(updatedTodos);
+  }, []);
 
-  const copyPass = useCallback(() => {
-    passwordRef.current?.select();
-    passwordRef.current?.setSelectionRange(0 , 20)
-    window.navigator.clipboard.writeText(password);
-  }, [password]);
+  const deleteTodo = (index) => {
+    const updatedtodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedtodos);
+    localStorage.setItem("todos", JSON.stringify(updatedtodos));
+  };
 
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-800">
-        <h1 className="text-white text-center my-3">Password Generator</h1>
-        <div className="flex shadow-lg rounded-lg overflow-hidden mb-4">
-          <input
-            type="text"
-            value={password}
-            className="outline-none w-full py-1 px-3"
-            placeholder="Password"
-            readOnly
-            ref={passwordRef}
-          />
-          <button
-            onClick={copyPass}
-            className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 hover:bg-blue-900 shadow-2xl transition-all"
-          >
-            Copy
-          </button>
-        </div>
-
-        <div className="flex text-sm gap-x-2">
-          <div className="flex items-center gap-x-1">
-            <input
-              type="range"
-              min={6}
-              max={100}
-              value={length}
-              className="cursor-pointer"
-              onChange={(e) => {
-                setLength(e.target.value);
-              }}
-            />
-            <label>Length: {length}</label>
-          </div>
-
-          <div className="flex items-center gap-x-1">
-            <input
-              type="checkbox"
-              defaultChecked={numberAllowed}
-              id="numberInput"
-              onChange={() => {
-                setNumberAllowed((prev) => !prev);
-              }}
-            />
-            <label htmlFor="numberInput">Numbers</label>
-          </div>
-
-          <div className="flex items-center gap-x-1">
-            <input
-              type="checkbox"
-              defaultChecked={charAllowed}
-              id="characterInput"
-              onChange={() => {
-                setCharAllowed((prev) => !prev);
-              }}
-            />
-            <label htmlFor="characterInput">Characters</label>
+      <div className=" bg-slate-100 h-screen flex  justify-center">
+        <div className="w-96 min-h-96 max-h-96 overflow-y-auto bg-white shadow-md rounded-md mt-10 hover:shadow-xl transition-shadow duration-300 ">
+          <div className="p-5">
+            <div className="flex justify-start  mt-5">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Enter to-do"
+                className="w-72 h-10 border outline-none border-b-gray-300 rounded-l-md px-5"
+              />
+              <button
+                onClick={addToDo}
+                className="bg-orange-500 text-white border px-3 py-1 rounded-r-md hover:bg-orange-600"
+              >
+                ADD
+              </button>
+            </div>
+            <div className="mt-3 p-1 ">
+              <ul className="flex flex-col justify-start gap-2">
+                {todos.map((todo, index) => (
+                  <li
+                    key={index}
+                    className="flex justify-between bg-slate-100 p-1 pl-2 items-center rounded-sm"
+                  >
+                    <span>{todo}</span>
+                    <button
+                      onClick={() => deleteTodo(index)}
+                      className="bg-red-500 text-white border px-2 py-1 hover:bg-red-600"
+                    >
+                      Delete
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -95,4 +69,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default APP;
