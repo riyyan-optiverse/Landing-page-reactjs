@@ -29,6 +29,9 @@ const APP = () => {
       <div className=" bg-slate-100 h-screen flex  justify-center">
         <div className="w-96 min-h-96 max-h-96 overflow-y-auto bg-white shadow-md rounded-md mt-10 hover:shadow-xl transition-shadow duration-300 ">
           <div className="p-5">
+            <div className="flex justify-center">
+              <p className="text-3xl font-semibold">To-Do-List</p>
+            </div>
             <div className="flex justify-start  mt-5">
               <input
                 type="text"
@@ -44,8 +47,8 @@ const APP = () => {
                 ADD
               </button>
             </div>
-            <div className="mt-3 p-1 ">
-              <ul className="flex flex-col justify-start gap-2">
+            <div className="mt-3 p-1 overflow-y-auto ">
+              <ul className="flex flex-col justify-start gap-2 ">
                 {todos.map((todo, index) => (
                   <li
                     key={index}
