@@ -27,8 +27,8 @@ const APP = () => {
   return (
     <>
       <div className=" bg-slate-100 h-screen flex  justify-center">
-        <div className="w-96 min-h-96 max-h-96 overflow-y-auto bg-white shadow-md rounded-md mt-10 hover:shadow-xl transition-shadow duration-300 ">
-          <div className="p-5">
+        <div className="w-96  min-h-96 max-h-96  bg-white shadow-md rounded-md mt-10 hover:shadow-xl transition-shadow duration-300 ">
+          <div className="p-4">
             <div className="flex justify-center">
               <p className="text-3xl font-semibold">To-Do-List</p>
             </div>
@@ -38,7 +38,7 @@ const APP = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter to-do"
-                className="w-72 h-10 border outline-none border-b-gray-300 rounded-l-md px-5"
+                className="w-full h-10 border outline-none border-b-gray-300 rounded-l-md px-5"
               />
               <button
                 onClick={addToDo}
@@ -47,8 +47,8 @@ const APP = () => {
                 ADD
               </button>
             </div>
-            <div className="mt-3 p-1 overflow-y-auto ">
-              <ul className="flex flex-col justify-start gap-2 ">
+            <div className="mt-3 w-full min-h-64 max-h-64 overflow-y-auto">
+              <ul className="flex flex-col justify-start gap-2  ">
                 {todos.map((todo, index) => (
                   <li
                     key={index}
