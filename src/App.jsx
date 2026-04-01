@@ -1,16 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { MdEdit, MdDelete } from "react-icons/md";
 const APP = () => {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
+  const [editIndex, setEditIndex] = useState(null);
+  const inputRef = useRef(null);
 
   const addToDo = () => {
     if (input.trim() === "") return;
-    else {
-      const updatedTodos = [...todos, input];
-      setTodos(updatedTodos);
-      localStorage.setItem("todos", JSON.stringify(updatedTodos));
-      setInput("");
+    if (
+      todos.some((todo) => todo.toLowerCase() === input.trim().toLowerCase())
+    ) {
+      alert("To-do already exist");
+      return;
     }
+    let updatedTodos;
+
+    if (editIndex !== null) {
+      updatedTodos = todos.map((todo, index) =>
+        index === editIndex ? input.trim() : todo,
+      );
+      setEditIndex(null);
+    } else {
+      updatedTodos = [...todos, input.trim()];
+    }
+    setTodos(updatedTodos);
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    setInput("");
   };
 
   useEffect(() => {
@@ -23,6 +39,11 @@ const APP = () => {
     setTodos(updatedtodos);
     localStorage.setItem("todos", JSON.stringify(updatedtodos));
   };
+  const editTodo = (index) => {
+    setInput(todos[index]);
+    setEditIndex(index);
+    inputRef.current?.focus();
+  };
 
   return (
     <>
@@ -34,6 +55,7 @@ const APP = () => {
             </div>
             <div className="flex justify-start  mt-5">
               <input
+                ref={inputRef}
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -55,12 +77,20 @@ const APP = () => {
                     className="flex justify-between bg-slate-100 p-1 pl-2 items-center rounded-sm"
                   >
                     <span>{todo}</span>
-                    <button
-                      onClick={() => deleteTodo(index)}
-                      className="bg-red-500 text-white border px-2 py-1 hover:bg-red-600"
-                    >
-                      Delete
-                    </button>
+                    <div>
+                      <button
+                        onClick={() => editTodo(index)}
+                        className="bg-blue-500 text-white px-2 py-1 mr-1 hover:bg-blue-600"
+                      >
+                        <MdEdit/>
+                      </button>
+                      <button
+                        onClick={() => deleteTodo(index)}
+                        className="bg-red-500 text-white border px-2 py-1 hover:bg-red-600"
+                      >
+                        <MdDelete/>
+                      </button>
+                    </div>
                   </li>
                 ))}
               </ul>
