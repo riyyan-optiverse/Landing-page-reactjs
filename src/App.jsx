@@ -12,6 +12,8 @@ const APP = () => {
       todos.some((todo) => todo.toLowerCase() === input.trim().toLowerCase())
     ) {
       alert("To-do already exist");
+      setInput("");
+      inputRef.current?.focus();
       return;
     }
     let updatedTodos;
@@ -28,7 +30,11 @@ const APP = () => {
     localStorage.setItem("todos", JSON.stringify(updatedTodos));
     setInput("");
   };
-
+  const handelkeydown = (e) => {
+    if (e.key === "Enter") {
+      addToDo();
+    }
+  };
   useEffect(() => {
     const updatedTodos = JSON.parse(localStorage.getItem("todos")) || [];
     setTodos(updatedTodos);
@@ -58,6 +64,7 @@ const APP = () => {
                 ref={inputRef}
                 type="text"
                 value={input}
+                onKeyDown={handelkeydown}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter to-do"
                 className="w-full h-10 border outline-none border-b-gray-300 rounded-l-md px-5"
@@ -82,13 +89,13 @@ const APP = () => {
                         onClick={() => editTodo(index)}
                         className="bg-blue-500 text-white px-2 py-1 mr-1 hover:bg-blue-600"
                       >
-                        <MdEdit/>
+                        <MdEdit />
                       </button>
                       <button
                         onClick={() => deleteTodo(index)}
                         className="bg-red-500 text-white border px-2 py-1 hover:bg-red-600"
                       >
-                        <MdDelete/>
+                        <MdDelete />
                       </button>
                     </div>
                   </li>
